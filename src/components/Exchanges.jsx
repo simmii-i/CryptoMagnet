@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { server } from '../index'
-import { Container, HStack } from '@chakra-ui/react'
+import { Container, HStack, Heading, Image, Text, VStack } from '@chakra-ui/react'
 import Loader from './Loader'
-import ExchangeCard from './CoinCard'
 import ErrorComponent from './ErrorComponent'
 
 
@@ -40,7 +39,7 @@ const Exchanges = () => {
        <HStack wrap={'wrap'} justifyContent={'space-evenly'} >
         {
           exchanges.map((i)=> (
-            <ExchangeCard key={i.id} name={i.name} img={i.image} rank={i.trust_score_rank} url={i.url} />
+            <ExchangeCard key={i.id} name={i.name} img={i.image} rank={i.trust_score_rank} />
           ))
         }
        </HStack>
@@ -51,5 +50,22 @@ const Exchanges = () => {
 
   )
 }
+
+const ExchangeCard = ({key,name,img,rank})=>(
+  <>
+    <VStack w={'52'} shadow={'lg'} p={'8'} borderRadius={'lg'} transition={'all 0.3s'} m={'4'} css={{
+      '&:hover':{
+        transform:'scale(1.1)'
+      }
+    }} >
+      <Image src={img} w={'10'} h={'10'} objectFit={'contain'} alt='exchange'/>
+      <Heading size={'md'} noOfLines={1}>
+        {rank}
+      </Heading>
+      <Text noOfLines={1} >{name}</Text>
+    </VStack>
+  </>
+
+)
 
 export default Exchanges

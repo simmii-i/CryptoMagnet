@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <HStack  w={'full'} position={'fixed'} p={'4'} shadow={'base'} bgColor={'blackAlpha.900'} zIndex={'111'}  >
+    <HStack  w={'full'}  p={'4'} shadow={'base'} bgColor={'blackAlpha.900'} zIndex={'111'}  >
     <Button pl={'4'} variant={'unstyled'} color={'white'}>
        <Link to='/'>Home</Link>
     </Button> 
