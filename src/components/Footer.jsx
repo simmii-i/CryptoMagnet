@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, GenericAvatarIcon, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const Footer = () => {
@@ -37,8 +37,10 @@ const Footer = () => {
             resources. Trust the best for your crypto adventure 🌻
           </Text>
           <VStack w={'full'} mt={'8'} alignItems={'center'} justifyContent={'center'}>
-          <Avatar boxSize={"28"} mt={["4", "0"]} />
-          <Text>Our Founder</Text>
+          <GenericAvatarIcon boxSize={"28"} mt={["4", "0"]} />
+          
+          <Text pl={'4'}>  Suman Saini🌻</Text>
+          <Text fontSize={'small'}>(Our Founder)</Text>
         </VStack>
           <Text
           w={'full'}

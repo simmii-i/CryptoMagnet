@@ -5,10 +5,12 @@ import Coins from "./components/Coins";
 import Exchanges from "./components/Exchanges";
 import CoinnDetails from "./components/CoinnDetails";
 import Footer from "./components/Footer";
+import ColorModeSwitcher from "./components/ColorModeSwitcher";
 
 function App() {
   return (
     <BrowserRouter>
+    <ColorModeSwitcher/>
     <Header/>
 
       <Routes>
